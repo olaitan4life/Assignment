@@ -1,0 +1,26 @@
+
+    #container{
+        margin: auto;
+        border: 5px solid lightblue;
+        text-align: center;
+        padding: 30px;
+        font-size: 30px;
+        height: 260px;
+        width: 600px;
+        background-color: #033107;
+        color: white;
+    }
+    #userInput{
+        width: 170px;
+        height: 23px;
+    }
+    #outputText{
+        color: red;
+    }
+    #urName{
+        width: 170px;
+        height: 23px;
+        margin-top: 20px;
+        margin-top: auto;
+    }
+    
