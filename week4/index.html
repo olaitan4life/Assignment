@@ -1,0 +1,223 @@
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Log in page</title>
+      <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+  
+  .loginbox {
+    width: 320px;
+    height: 420px;
+    background-color: #000;
+    color: #fff;
+    top: 20%;
+    left: 40%;
+    position: absolute;
+    translate: (-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px 20px;
+    border-radius: 10%;
+    align-items: center;
+  }
+  
+  .image {
+    width: 300px;
+    height: 420px;
+    top: 20%;
+    left: 500%;
+    translate: (-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 50%;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  .loginbox input label section {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20;
+  
+  }
+  .input{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 35px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .sub {
+    background: red;
+    border-radius: 15%;
+    font-size: 18px;
+  
+  }
+  
+      </style>
+    </head>
+    <body>
+      <div class="loginbox">
+        <img src="data:image/png;base64,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" class="avatar" />
+        <h1>Login Here</h1>
+        <p>First Name</p>
+        <input type="text" name="" placeholder="Enter Username" class="input" />
+        <p>Last Name</p>
+        <input type="text" name="" placeholder="Enter Username" class="input" />
+        <p> Your Phone Number </p>
+        <input type="text" name="" placeholder="Enter Username" class="input" />
+        
+        <p>Password</p>
+        <input type="text" name="" placeholder="Enter password" class="pass" /><br>
+        <p>Select your birthday</p>
+        <select id="" name="dob_month">
+          <option value="-">-</option>
+          <option value="1">January</option>
+          <option value="2">Febuary</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+         <select id="" name="dob_day">
+          <option value="-">-</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+         <select id="form_dob_year" name="dob_year">
+          <option value="-">-</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+          <option value="2008">2008</option>
+          <option value="2007">2007</option>
+          <option value="2006">2006</option>
+          <option value="2005">2005</option>
+          <option value="2004">2004</option>
+          <option value="2003">2003</option>
+          <option value="2002">2002</option>
+          <option value="2001">2001</option>
+          <option value="2000">2000</option>
+          <option value="1999">1999</option>
+          <option value="1998">1998</option>
+          <option value="1997">1997</option>
+          <option value="1996">1996</option>
+          <option value="1995">1995</option>
+          <option value="1994">1994</option>
+          <option value="1993">1993</option>
+          <option value="1992">1992</option>
+          <option value="1991">1991</option>
+          <option value="1990">1990</option>
+          <option value="1989">1989</option>
+          <option value="1988">1988</option>
+          <option value="1987">1987</option>
+          <option value="1986">1986</option>
+          <option value="1985">1985</option>
+          <option value="1984">1984</option>
+          <option value="1983">1983</option>
+          <option value="1982">1982</option>
+          <option value="1981">1981</option>
+          <option value="1980">1980</option>
+          <option value="1979">1979</option>
+          <option value="1978">1978</option>
+          <option value="1977">1977</option>
+          <option value="1976">1976</option>
+          <option value="1975">1975</option>
+          <option value="1974">1974</option>
+          <option value="1973">1973</option>
+          <option value="1972">1972</option>
+          <option value="1971">1971</option>
+          <option value="1970">1970</option>
+          <option value="1969">1969</option>
+          <option value="1968">1968</option>
+          <option value="1967">1967</option>
+          <option value="1966">1966</option>
+          <option value="1965">1965</option>
+          <option value="1964">1964</option>
+          <option value="1963">1963</option>
+          <option value="1962">1962</option>
+          <option value="1961">1961</option>
+          <option value="1960">1960</option>
+          <option value="1959">1959</option>
+        </select>
+        
+        <p>Select your Gender Type</p>
+        <input type="radio" id="" name="" value="">
+        <label for="">Male</label><br>
+        <input type="radio" id="" name="" value="">
+        <label for="">Female</label><br>  
+        <form action="/action_page.php">
+          <label for="favcolor">Select your favorite color:</label>
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+          
+        </form>
+        
+      </div>
+    </body>
+  </html>
+  
